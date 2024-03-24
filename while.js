@@ -23,16 +23,45 @@ while (i <= 5) {
 
 // Favotite Movie Game
 
+// let favMovie = "Avatar";
+// let guess = prompt("guess my favourite movie");
+
+// while ((guess != favMovie) && (guess != "quit")) {
+//     guess = prompt("wrong guess, try again");
+// }
+
+// if (guess == favMovie) {
+//     console.log("congrats!");
+// } else {
+//     console.log("you quit.")
+// }
+
+
+// code refactoring
+
 let favMovie = "Avatar";
 let guess = prompt("guess my favourite movie");
 
-while ((guess != favMovie) && (guess != "quit")) {
+while (guess != favMovie) {
+    if (guess == "quit") {
+        console.log("you quit");
+        break;
+    }
     guess = prompt("wrong guess, try again");
 }
 
 if (guess == favMovie) {
     console.log("congrats!");
-} else {
-    console.log("you quit.")
 }
 
+
+// Break statement
+
+i = 1;
+while (i <= 5 ) {
+    if (i == 3) {
+        break;
+    }
+    console.log(i); //1,2
+    i++;
+}
